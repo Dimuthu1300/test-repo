@@ -1,107 +1,130 @@
-/* Reset default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Roboto:wght@300;400&display=swap');
 
+/* General styling */
 body {
-  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #006769, #40A578, #9DDE8B, #E6FF94);
-  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  background: url('pics/istockphoto-1222821385-640x640.jpg') no-repeat center center/cover;
+  background-size: cover;
 }
 
-/* Remove any nested div styles that might cause elevation */
+/* Form container */
 div {
-  background-color: white;
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 103, 105, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
-  margin: 20px;
+  margin: 20px 0; /* Add margin to evenly distribute space */
 }
 
-/* Remove all nested div specific styles */
-div div {
-  margin: 0;
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #006769; 
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Helvetica', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+/* Form elements container */
+form div {
+  position: relative;
+  margin-bottom: 20px;
   padding: 0;
   box-shadow: none;
-  background: none;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-label {
-  color: #006769;
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-input, select, textarea {
+/* Input fields */
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select, 
+textarea {
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #9DDE8B;
+  padding: 12px 12px 12px 40px; /* Adjust padding to make space for icons */
+  border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #E6FF94;
-  font-size: 1rem;
+  font-size: 16px;
+  background-color: #e0f7e0;
+  box-sizing: border-box;
 }
 
-/* Specific select styles to remove elevation */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23006769' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L2 5h12z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  padding-right: 2.5rem;
-  box-shadow: none;
-  position: relative;
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: bold;
 }
 
-input:focus, select:focus, textarea:focus {
-  outline: none;
-  border-color: #40A578;
-  background-color: white;
+/* Icon positioning */
+.fa-brands,
+.fa-solid {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
 }
 
-button {
-  background-color: #006769;
-  color: white;
-  padding: 1rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
+/* For icons next to inputs with labels, adjust position */
+label + input + i {
+  top: calc(50% + 10px);
 }
 
-button:hover {
-  background-color: #40A578;
-}
-
+/* Textarea specific styling */
 textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-br {
-  display: none;
+/* Select styling */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
 }
 
-@media (max-width: 480px) {
-  div {
-      margin: 10px;
-      padding: 1.5rem;
-  }
+/* Button styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #006666;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #004444;
+}
+
+/* Focus states */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #006666;
+  box-shadow: 0 0 0 2px rgba(0, 102, 102, 0.1);
+}
+
+/* Placeholder styling */
+::placeholder {
+  color: #999;
 }
