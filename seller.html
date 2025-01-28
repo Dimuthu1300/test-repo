@@ -9,15 +9,15 @@
 </head>
 <body>
 
-    <div>
+    <div class="form-container">
         <h2>ADD PRODUCTS</h2>
         <form action="" method="post">
-            <div>
+            <div class="input-wrapper">
                 <input type="text" name="product" id="product" required placeholder="Enter product">
                 <i class="fa-brands fa-product-hunt"></i>
             </div>
     
-            <div>
+            <div class="input-wrapper">
                 <label for="type">Product Type</label>
                 <select id="Type" name="productType">
                     <option value="Vegetabels">Vegetables</option>
@@ -26,21 +26,21 @@
                 </select>
             </div>
             
-            <div>
+            <div class="input-wrapper">
                 <textarea id="description" name="description" rows="5" cols="30" placeholder="Add a product description here..."></textarea>
             </div>
 
-            <div>
-                <input type="text" name="amount" id="amount" required placeholder="Enter Amount">
+            <div class="input-wrapper">
+                <input type="text" name="amount" id="amount" required placeholder="Enter Amount(kg)">
                 <i class="fa-solid fa-weight-hanging"></i>
             </div>
             
-            <div>
+            <div class="input-wrapper">
                 <input type="text" name="seller" id="seller" required placeholder="Enter Seller's name">
                 <i class="fa-solid fa-user"></i>
             </div>
             
-            <div>
+            <div class="input-wrapper">
                 <input type="text" name="seller" id="seller" required placeholder="Enter Sellers's contact number">
                 <i class="fa-solid fa-phone"></i>
             </div>
@@ -49,5 +49,8 @@
     
         </form>
     </div>
+
+    <script src="seller.js"></script>
+
 </body>
 </html>

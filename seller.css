@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Roboto:wght@300;400&display=swap');
 
+/* Global box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General styling */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  background: url('pics/istockphoto-1222821385-640x640.jpg') no-repeat center center/cover;
+  height: 100vh;
+  overflow: hidden;
+  padding: 10px;
+  background-image: url('pics/fresh-vegetables-black-background_774065-129.jpg');
   background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* Form container */
-div {
+.form-container {
   background: rgba(255, 255, 255, 0.9);
   padding: 30px;
   border-radius: 10px;
@@ -23,31 +33,30 @@ div {
   margin: 20px 0; /* Add margin to evenly distribute space */
 }
 
+/* Heading styling */
 h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #006769; 
+  color: #006769;
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Helvetica', sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Form elements container */
-form div {
+.input-wrapper {
   position: relative;
   margin-bottom: 20px;
-  padding: 0;
-  box-shadow: none;
 }
 
 /* Input fields */
-input[type="text"], 
-input[type="email"], 
-input[type="password"], 
-select, 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
 textarea {
   width: 100%;
   padding: 12px 12px 12px 40px; /* Adjust padding to make space for icons */
@@ -74,11 +83,6 @@ label {
   top: 50%;
   transform: translateY(-50%);
   color: #666;
-}
-
-/* For icons next to inputs with labels, adjust position */
-label + input + i {
-  top: calc(50% + 10px);
 }
 
 /* Textarea specific styling */
