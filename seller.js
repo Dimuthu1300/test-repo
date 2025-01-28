@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
 
+        //get values from input fields
         const productData = {
             product: document.getElementById("product").value.trim(),
             productType: document.getElementById("Type").value.trim(),
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
             city: document.getElementById("city").value.trim()
         };
 
-        // Add your validation here (or in a separate function)
+        //validation 
         if (!productData.product || !productData.productType || !productData.description || 
             !productData.amount || !productData.sellerName || !productData.sellerContact ||
             !productData.district || !productData.city) {
@@ -28,10 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Display success message
         alert("Product added successfully!");
 
-        // Log the product data to the console (or you can process it further)
         console.log(productData);
     });
 });
