@@ -16,10 +16,10 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 10px;
-  background-image: url('pics/fresh-vegetables-black-background_774065-129.jpg');
+  background-image: url('pics/fresh-vegetables-black-background_774065-129.jpg'); 
   background-size: cover;
   background-position: center;
-  position: relative;
+  position: relative; 
 }
 
 /* Form container */
@@ -33,17 +33,16 @@ body {
   margin: 20px 0; /* Add margin to evenly distribute space */
 }
 
-/* Heading styling */
 h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #006769;
+  color: #006769; 
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: 'Helvetica', sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
 /* Form elements container */
@@ -52,11 +51,22 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Location input fields container */
+.location-container {
+  display: flex;
+  gap: 10px; /* Adjust spacing between input fields */
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
 /* Input fields */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select,
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select, 
 textarea {
   width: 100%;
   padding: 12px 12px 12px 40px; /* Adjust padding to make space for icons */

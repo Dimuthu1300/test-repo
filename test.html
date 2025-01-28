@@ -11,38 +11,23 @@
     <div class="form-container">
         <h2>ADD PRODUCTS</h2>
         <form id="product-form">
-            <div class="input-wrapper">
-                <input type="text" name="product" id="product" required placeholder="Enter product">
-                <i class="fa-brands fa-product-hunt"></i>
-            </div>
+            <!-- Other input fields here -->
 
             <div class="input-wrapper">
-                <label for="type">Product Type</label>
-                <select id="Type" name="productType">
-                    <option value="Vegetables">Vegetables</option>
-                    <option value="Fruits">Fruits</option>
-                    <option value="Spices">Spices</option>
-                </select>
+                <label for="location">Location</label>
+                <div class="location-container">
+                    <div class="input-group">
+                        <input type="text" name="district" id="district" placeholder="District">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="city" id="city" placeholder="City">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-wrapper">
-                <textarea id="description" name="description" rows="5" cols="30" placeholder="Add a description here..."></textarea>
-            </div>
-
-            <div class="input-wrapper">
-                <input type="text" name="amount" id="amount" required placeholder="Enter Amount">
-                <i class="fa-solid fa-weight-hanging"></i>
-            </div>
-
-            <div class="input-wrapper">
-                <input type="text" name="sellerName" id="sellerName" required placeholder="Enter Seller's name">
-                <i class="fa-solid fa-user"></i>
-            </div>
-
-            <div class="input-wrapper">
-                <input type="text" name="sellerContact" id="sellerContact" required placeholder="Enter Seller's contact number">
-                <i class="fa-solid fa-phone"></i>
-            </div>
+            <!-- Other input fields here -->
 
             <button type="submit">Add Product</button>
         </form>

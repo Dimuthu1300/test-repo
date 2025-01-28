@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <title>seller</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel = "stylesheet" href = "seller.css">
+    <link rel="stylesheet" href="seller.css">
 </head>
 <body>
-
     <div class="form-container">
         <h2>ADD PRODUCTS</h2>
-        <form action="" method="post">
+        <form id="product-form">
             <div class="input-wrapper">
                 <input type="text" name="product" id="product" required placeholder="Enter product">
                 <i class="fa-brands fa-product-hunt"></i>
             </div>
-    
+
             <div class="input-wrapper">
-                <label for="type">Product Type</label>
-                <select id="Type" name="productType">
-                    <option value="Vegetabels">Vegetables</option>
-                    <option value="Fruits">Fruits</option>
-                    <option value="spices">Spices</option>
-                </select>
-            </div>
-            
-            <div class="input-wrapper">
-                <textarea id="description" name="description" rows="5" cols="30" placeholder="Add a product description here..."></textarea>
+                <input type="text" name="amount" id="amount" required placeholder="Enter Weight (kg)">
+                <i class="fa-solid fa-weight-hanging"></i>
             </div>
 
             <div class="input-wrapper">
-                <input type="text" name="amount" id="amount" required placeholder="Enter Amount(kg)">
-                <i class="fa-solid fa-weight-hanging"></i>
+                <select id="Type" name="productType">
+                    <option value="item">Select Product Type</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruits">Fruits</option>
+                    <option value="Spices">Spices</option>
+                </select>
             </div>
-            
+
             <div class="input-wrapper">
-                <input type="text" name="seller" id="seller" required placeholder="Enter Seller's name">
-                <i class="fa-solid fa-user"></i>
+                <textarea id="description" name="description" rows="5" cols="30" placeholder="Add a production description here..."></textarea>
             </div>
-            
+
             <div class="input-wrapper">
-                <input type="text" name="seller" id="seller" required placeholder="Enter Sellers's contact number">
-                <i class="fa-solid fa-phone"></i>
+                <div class="location-container">
+                    <div class="input-group">
+                        <input type="text" name="sellername" id="sellername" placeholder="Seller's Name">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="sellercontact" id="sellercontact" placeholder="Phone Number">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <div class="location-container">
+                    <div class="input-group">
+                        <input type="text" name="district" id="district" placeholder="District">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="text" name="city" id="city" placeholder="City">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                </div>
             </div>
 
             <button type="submit">Add Product</button>
-    
+
         </form>
     </div>
-
     <script src="seller.js"></script>
-
 </body>
 </html>
