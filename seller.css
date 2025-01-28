@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Arial', sans-serif;
   display: flex;
@@ -16,7 +15,7 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 10px;
-  background-image: url('pics/fresh-vegetables-black-background_774065-129.jpg'); 
+  background-image: url('pics/thumb-1920-1030841.jpg'); 
   background-size: cover;
   background-position: center;
   position: relative; 
